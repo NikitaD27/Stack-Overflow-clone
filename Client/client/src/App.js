@@ -6,6 +6,15 @@ import Navbar from './components/Navbar/Navbar'
 import AllRoutes from './AllRoutes'
 import { fetchAllQuestions } from './actions/question'
 import { fetchAllUsers } from './actions/users'
+import ChatBot from 'react-simple-chatbot';
+
+const steps = [
+	{
+		id: '0',
+		message: 'Hey,How may I help you?',
+		end: true
+	}
+];
 
 function App() {
 
@@ -22,8 +31,11 @@ function App() {
         <Navbar />
         <AllRoutes />
       </Router >
-    </div>
-  );
+    <h1>Welcome to Stack Overflow</h1>
+    <ChatBot steps={steps} />
+  </div>
+);
 }
+
 
 export default App;
