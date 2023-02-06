@@ -2,10 +2,10 @@ import express from 'express'
 import mongoose from 'mongoose'
 import cors from 'cors'
 import dotenv from 'dotenv'
-
 import userRoutes from './routes/users.js'
 import questionRoutes from './routes/Questions.js'
 import answerRoutes from './routes/Answers.js'
+
 
 const app = express();
 dotenv.config();
@@ -28,3 +28,4 @@ mongoose.set('strictQuery', true)
 <mongoose.connect( DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => app.listen(PORT, () => {console.log(`server running on port ${PORT}`)}))
     .catch((err) => console.log(err.message))
+
